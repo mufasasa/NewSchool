@@ -1,0 +1,31 @@
+{% extends 'portal/layout.html' %}
+
+
+{% block body %}
+    <div>
+        Welcome {{request.user.firstname}}
+        <h3>Course Sheet</h3>
+        <table class="table table-bordered">
+            <thead>
+                <th scope="col">Student Name</th>
+                <th scope="col">Student Code</th>
+                <th scope="col">Test (30%)</th>
+                <th scope="col">Exam (70%)</th>
+                <th scope="col">Total</th>
+                <th scope="col">Remarks</th>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <td> {{student.first_name}} {{student.last_name}} </td>
+                <td> {{student.user_name}} </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+{% endblock body %}
+    

@@ -1,0 +1,12 @@
+{% extends 'portal/layout.html' %}
+
+
+{% block body %} 
+    <h1>All Available Courses</h1>
+    <ul class="list-group">
+        {% for course in courses %}
+        <li class="list-group-item"> <a href="{% url 'course' course.course_code %}"> {{course.course_name}} </a> </li>
+        {% endfor %}
+    </ul>
+{% endblock body %} 
+    

@@ -1,0 +1,24 @@
+{% extends 'portal/layout.html' %}
+
+
+{% block body %}
+
+
+{% if message %}
+    {{message}}
+{% endif %}
+<div style="margin: 60px; padding: 10px;">
+<form action= "{% url 'login' %}", method = "POST">
+    {% csrf_token %}
+
+    <input type="text" placeholder="username" name="username">
+    <input type="password" placeholder="password" name="password">
+    <input type="submit" value="login">  
+</form>
+</div>
+    
+    
+{% endblock body %}
+
+
+    

@@ -1,0 +1,18 @@
+{% extends "portal/layout.html" %}
+
+
+{% block body %}
+
+<ul class="list-group">
+    <li class="list-group-item">Course Name: {{course.course_name}} </li>
+    <li class="list-group-item">Course Code: {{course.course_code}} </li>
+    <li class="list-group-item">Course Lecturer: {{course.lecturer}} </li>
+    <li class="list-group-item">Venue: {{course.venue}} </li>
+    <li class="list-group-item">Course Days: {{course.day}} </li>
+</ul>
+<div style="margin-top: 45px;">
+    <a href = "{% url 'register' course.course_code %}">Register for this course</a>
+</div>
+    
+{% endblock body %}
+    
